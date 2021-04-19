@@ -1,11 +1,15 @@
+#pragma once
+
 #include <iostream>
 #include <string>
+
+#include "Scene.h"
 
 int main(int argc, char* argv[])
 {
 	if (argc > 1)
 	{
-
+		Scene scene = Scene();
 		std::string pathname = "";
 		int res = 800;
 
@@ -56,7 +60,7 @@ int main(int argc, char* argv[])
 		}
 
 		//create the point cloud
-
+		scene.readfile(pathname);
 		//load in model
 		//create render cam
 		//render
